@@ -6,6 +6,7 @@ const greetingWrapper = document.querySelector('#greeting');
 const farewellsWrapper = document.querySelector('#farewell');
 const followupWrapper = document.querySelector('#followup');
 const conclusionWrapper = document.querySelector('#conclusion');
+const copyToClipboardBtn = document.querySelector('#copy');
 
 const btnbuilder = (text) => {
 	const button = document.createElement('button');
@@ -72,6 +73,41 @@ const textReplacer = (e) => {
 	removeElements(allButtons);
 	const chosenTextWrapper = document.createElement('div');
 	chosenTextWrapper.innerText = chosenText;
+	chosenTextWrapper.classList.add('chosen');
 	chosenTextParent.appendChild(chosenTextWrapper);
 	chosenTextParent.appendChild(resetOption);
 };
+
+const copyToClibpoard = (source) => {
+	navigator.clipboard.writeText(source).then(
+		function () {
+			alert(`Skopiowano: ${source}`);
+		},
+		function (err) {
+			alert('Nie można było skopiować 😢');
+		}
+	);
+};
+
+const mailContentGrabber = () => {
+	const content = document.querySelectorAll('.chosen');
+	let output = '';
+	content.forEach((element) => {
+		if (element.innerText) {
+			output += element.innerText;
+		} else {
+			output += element.value;
+		}
+		output += '\n';
+	});
+	return output;
+};
+
+copyToClipboardBtn.addEventListener('click', () => {
+	const text = mailContentGrabber();
+	if (text) {
+		copyToClibpoard(mailContentGrabber());
+	}
+});
+
+const sendBuilder = (text) => {};
