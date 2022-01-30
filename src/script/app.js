@@ -84,7 +84,7 @@ const textReplacer = (e) => {
 const copyToClibpoard = (source) => {
 	navigator.clipboard.writeText(source).then(
 		function () {
-			alert(`Skopiowano: ${source}`);
+			//alert(`Skopiowano: ${source}`);
 		},
 		function (err) {
 			alert('Nie można było skopiować 😢');
@@ -110,6 +110,10 @@ copyToClipboardBtn.addEventListener('click', () => {
 	const text = mailContentGrabber();
 	if (text) {
 		copyToClibpoard(mailContentGrabber());
+		contentWrapper.classList.add('copy-animation');
+		setTimeout(() => {
+			contentWrapper.classList.remove('copy-animation');
+		}, 2000);
 	}
 });
 

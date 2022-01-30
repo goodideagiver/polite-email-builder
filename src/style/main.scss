@@ -17,7 +17,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
-	width: 100vw;
+	//width: 100vw;
 	height: fit-content;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -44,6 +44,34 @@ body {
 	align-items: flex-start;
 	justify-content: left;
 	gap: 40px;
+	button {
+		position: relative;
+		overflow: hidden;
+		&::after {
+			transform: translate(-150%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 0 5px;
+			background-color: white;
+			color: black;
+			content: '+';
+			font-size: 20px;
+			border-radius: 0 0 5px 0;
+			font-weight: bold;
+			opacity: 80%;
+			box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+				rgba(0, 0, 0, 0.22) 0px 10px 10px;
+			transition: 0.3s;
+		}
+		&:hover {
+			background-color: gray;
+			color: white;
+			&::after {
+				transform: none;
+			}
+		}
+	}
 }
 
 .options-wrapper {
@@ -64,25 +92,7 @@ body {
 		background-color: rgb(235, 235, 233);
 		box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 		cursor: pointer;
-		position: relative;
-		overflow: hidden;
-		&::after {
-			transform: translate(-150%);
-			position: absolute;
-			top: 0;
-			left: 0;
-			padding: 0 5px;
-			background-color: white;
-			color: black;
-			content: '+';
-			font-size: 20px;
-			border-radius: 0 0 5px 0;
-			font-weight: bold;
-			opacity: 80%;
-			box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-				rgba(0, 0, 0, 0.22) 0px 10px 10px;
-			transition: 0.3s;
-		}
+
 		&:hover {
 			background-color: gray;
 			color: white;
@@ -150,5 +160,24 @@ body {
 		box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
 			rgba(0, 0, 0, 0.22) 0px 15px 12px;
 		border: 3px gray solid;
+	}
+}
+
+.copy-animation {
+	animation: copied 1s ease-in-out;
+}
+
+@keyframes copied {
+	0% {
+		transform: scale(1);
+		filter: none;
+	}
+	5% {
+		transform: scale(0.9);
+		background-color: rgba(128, 128, 128, 0.301);
+	}
+	100% {
+		transform: scale(1);
+		filter: none;
 	}
 }
