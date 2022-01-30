@@ -181,3 +181,32 @@ body {
 		filter: none;
 	}
 }
+
+.website-bottom {
+	padding: 15px;
+	footer {
+		display: flex;
+		gap: 5px;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		h2 {
+			flex-basis: 100%;
+			text-align: center;
+		}
+	}
+	a {
+		background-color: white;
+		border-radius: 5px;
+		border: 1px lightgray solid;
+		text-decoration: none;
+		padding: 5px 15px;
+		color: purple;
+		transition: 0.3s;
+		flex: 0 1 100px;
+		text-align: center;
+		&:hover {
+			box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+		}
+	}
+}
