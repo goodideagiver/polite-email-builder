@@ -77,6 +77,10 @@ body {
 	border-radius: 25px;
 	font-weight: bold;
 	cursor: pointer;
+	transition: 0.3s;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
 
 #app {

@@ -4,7 +4,7 @@ const greetings = [
 	'Dear Ms',
 	'Dear Sir',
 	'Dear Madam',
-	'‘To whom it may concern',
+	'To whom it may concern',
 	'Hello',
 	'Hi',
 ];

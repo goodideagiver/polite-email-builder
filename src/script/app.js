@@ -7,6 +7,9 @@ const farewellsWrapper = document.querySelector('#farewell');
 const followupWrapper = document.querySelector('#followup');
 const conclusionWrapper = document.querySelector('#conclusion');
 const copyToClipboardBtn = document.querySelector('#copy');
+const email = document.querySelector('#emailText');
+const topic = document.querySelector('#topicText');
+const sendBtn = document.querySelector('#send');
 
 const btnbuilder = (text) => {
 	const button = document.createElement('button');
@@ -110,4 +113,19 @@ copyToClipboardBtn.addEventListener('click', () => {
 	}
 });
 
-const sendBuilder = (text) => {};
+const sendBuilder = () => {
+	const outputMailto = {
+		email: email.value,
+		topic: topic.value,
+		body: mailContentGrabber(),
+	};
+	return outputMailto;
+};
+
+const mailtoAction = () => {
+	const mailOutput = sendBuilder();
+	console.log(mailOutput);
+	window.location.href = `mailto:${mailOutput.email}?subject=${mailOutput.topic}&${mailOutput.body}`;
+};
+
+sendBtn.addEventListener('click', mailtoAction);
