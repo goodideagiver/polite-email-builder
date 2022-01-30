@@ -66,8 +66,8 @@ const resetSection = (e) => {
 
 const textReplacer = (e) => {
 	const resetOption = document.createElement('div');
-	resetOption.innerText = 'x';
-	resetOption.classList.add('option-reset');
+	resetOption.innerText = 'restart_alt';
+	resetOption.classList.add('option-reset', 'material-icons-outlined');
 	resetOption.addEventListener('click', resetSection);
 
 	const chosenText = e.target.innerText;

@@ -57,29 +57,53 @@ body {
 		flex: 1 1 20%;
 		max-width: max-content;
 		border: 1px rgba(128, 128, 128, 0.253) solid;
-		border-radius: 8px;
+		border-radius: 10px;
 		padding: 15px;
 		background-color: transparent;
 		transition: 0.1s;
 		background-color: rgb(235, 235, 233);
 		box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		&::after {
+			transform: translate(-150%);
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 0 5px;
+			background-color: white;
+			color: black;
+			content: '+';
+			font-size: 20px;
+			border-radius: 0 0 5px 0;
+			font-weight: bold;
+			opacity: 80%;
+			box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+				rgba(0, 0, 0, 0.22) 0px 10px 10px;
+			transition: 0.3s;
+		}
 		&:hover {
 			background-color: gray;
 			color: white;
+			&::after {
+				transform: none;
+			}
 		}
 	}
 }
 
 .option-reset {
-	background-color: rgb(245, 173, 173);
+	background-color: white;
+	border: 1px rgba(0, 0, 0, 0.273) solid;
+	color: black;
 	padding: 5px;
-	border-radius: 25px;
+	border-radius: 10px;
 	font-weight: bold;
 	cursor: pointer;
 	transition: 0.3s;
 	&:hover {
-		transform: scale(1.05);
+		transform: scale(1.05) rotate(-360deg);
 	}
 }
 
@@ -116,7 +140,7 @@ body {
 
 .name-box {
 	border: lightgray 3px dashed;
-	border-radius: 25px;
+	border-radius: 10px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	padding: 15px;
