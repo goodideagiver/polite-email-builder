@@ -18,17 +18,28 @@
 		<div id="app">
 			<label for="adress">To:</label>
 			<section id="adress">
-				<input id="emailText" class="name-box" type="email" />
+				<input
+					placeholder="example@mail.com"
+					id="emailText"
+					class="name-box"
+					type="email"
+				/>
 			</section>
 			<label for="topic">Topic:</label>
 			<section id="topic">
-				<input id="topicText" class="name-box" type="text" />
+				<input
+					placeholder="Example message topic"
+					id="topicText"
+					class="name-box"
+					type="text"
+				/>
 			</section>
 			<label for="content">Body</label>
 			<section id="content">
 				<div class="options-wrapper" id="greeting"></div>
 				<div class="options-wrapper" id="followup"></div>
 				<textarea
+					placeholder="Your message body goes here"
 					class="name-box chosen"
 					id="mailBody"
 					rows="10"
