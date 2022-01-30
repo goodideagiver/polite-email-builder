@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Polite email builder</title>
+		<link rel="stylesheet" href="src/style/css/min/main.min.css" />
+		<script defer src="src/obj/mailExpr.js"></script>
+		<script defer src="src/script/app.js"></script>
+	</head>
+	<body>
+		<h1>Polite email builder</h1>
+		<div id="app">
+			<label for="adress">To:</label>
+			<section id="adress">
+				<input class="name-box" type="email" />
+			</section>
+			<label for="topic">Topic:</label>
+			<section id="topic">
+				<input class="name-box" type="text" />
+			</section>
+			<label for="content">Body</label>
+			<section id="content">
+				<div class="options-wrapper" id="greeting"></div>
+				<div class="options-wrapper" id="followup"></div>
+				<textarea class="name-box" id="mailBody" rows="10"></textarea>
+				<div class="options-wrapper" id="farewell"></div>
+				<div class="options-wrapper" id="conclusion"></div>
+				<input class="name-box" type="text" />
+			</section>
+			<section class="confirm-buttons options-wrapper">
+				<button id="reset">Reset all</button>
+				<button id="send">Send</button>
+				<button id="copy">Copy to clipboard</button>
+			</section>
+		</div>
+	</body>
+</html>
