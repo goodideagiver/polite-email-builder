@@ -10,12 +10,20 @@ const copyToClipboardBtn = document.querySelector('#copy');
 const email = document.querySelector('#emailText');
 const topic = document.querySelector('#topicText');
 const sendBtn = document.querySelector('#send');
+const resetBtn = document.querySelector('#reset');
 
 const btnbuilder = (text) => {
 	const button = document.createElement('button');
 	button.innerText = text;
 	button.addEventListener('click', () => textReplacer(event));
 	return button;
+};
+
+const mailAnimationPlay = () => {
+	contentWrapper.classList.add('copy-animation');
+	setTimeout(() => {
+		contentWrapper.classList.remove('copy-animation');
+	}, 2000);
 };
 
 const mailObj = [
@@ -37,12 +45,18 @@ const mailObj = [
 	},
 ];
 
-mailObj.forEach((element) => {
-	const wrapper = element.wrapper;
-	element.options.forEach((element) => {
-		wrapper.appendChild(btnbuilder(element));
+const objectCreator = () => {
+	mailObj.forEach((element) => {
+		const wrapper = element.wrapper;
+		wrapper.innerHTML = '';
+		element.options.forEach((element) => {
+			wrapper.appendChild(btnbuilder(element));
+		});
 	});
-});
+	mailAnimationPlay();
+};
+
+objectCreator();
 
 const removeElements = (nodeList) => {
 	nodeList.forEach((element) => {
@@ -110,10 +124,7 @@ copyToClipboardBtn.addEventListener('click', () => {
 	const text = mailContentGrabber();
 	if (text) {
 		copyToClibpoard(mailContentGrabber());
-		contentWrapper.classList.add('copy-animation');
-		setTimeout(() => {
-			contentWrapper.classList.remove('copy-animation');
-		}, 2000);
+		mailAnimationPlay();
 	}
 });
 
@@ -134,3 +145,4 @@ const mailtoAction = () => {
 };
 
 sendBtn.addEventListener('click', mailtoAction);
+resetBtn.addEventListener('click', objectCreator);
