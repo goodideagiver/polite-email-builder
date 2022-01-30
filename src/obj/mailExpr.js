@@ -1,12 +1,12 @@
 const greetings = [
-	'Dear Mr',
-	'Dear Mrs',
-	'Dear Ms',
-	'Dear Sir',
-	'Dear Madam',
-	'To whom it may concern',
-	'Hello',
-	'Hi',
+	'Dear Mr,',
+	'Dear Mrs,',
+	'Dear Ms,',
+	'Dear Sir,',
+	'Dear Madam,',
+	'To whom it may concern,',
+	'Hello!',
+	'Hi!',
 ];
 
 const followups = [
@@ -33,5 +33,5 @@ const conclusions = [
 	'Yours faithfully',
 	'Yours sincerely',
 	'Regards',
+	'Sincerely,',
 ];
-
