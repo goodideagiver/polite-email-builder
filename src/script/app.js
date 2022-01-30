@@ -124,8 +124,9 @@ const sendBuilder = () => {
 
 const mailtoAction = () => {
 	const mailOutput = sendBuilder();
-	console.log(mailOutput);
-	window.location.href = `mailto:${mailOutput.email}?subject=${mailOutput.topic}&${mailOutput.body}`;
+	window.location.href = `mailto:${mailOutput.email}?subject=${
+		mailOutput.topic
+	}&body=${encodeURIComponent(mailOutput.body)}`;
 };
 
 sendBtn.addEventListener('click', mailtoAction);
