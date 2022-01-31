@@ -119,7 +119,7 @@ const textReplacer = (e) => {
 const copyToClibpoard = (source) => {
 	navigator.clipboard.writeText(source).then(
 		function () {
-			//alert(`Skopiowano: ${source}`);
+			//Here will be custom notification
 		},
 		function (err) {
 			alert('Nie można było skopiować 😢');
@@ -130,13 +130,18 @@ const copyToClibpoard = (source) => {
 const mailContentGrabber = () => {
 	const content = document.querySelectorAll('.chosen');
 	let output = '';
-	content.forEach((element) => {
+	content.forEach((element, index) => {
 		if (element.innerText) {
 			output += element.innerText;
-		} else {
+			if (index < content.length) {
+				output += '\n\n';
+			}
+		} else if (element.value > '') {
 			output += element.value;
+			if (index < content.length) {
+				output += '\n\n';
+			}
 		}
-		output += '\n';
 	});
 	return output;
 };
