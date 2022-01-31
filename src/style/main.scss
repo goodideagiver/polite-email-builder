@@ -297,8 +297,12 @@ body {
 		//margin: 0 20px;
 		button {
 			flex: 1 1 45%;
-			max-width: none;
+			max-width: 50vw;
+			min-width: fit-content;
 		}
+		max-width: 92vw;
+		margin: auto;
+		flex-wrap: nowrap;
 	}
 	#app {
 		margin: 10px 5px;
