@@ -132,6 +132,8 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 15px;
+	max-height: 70vh;
+	overflow-y: auto;
 	input {
 		width: 100%;
 		font-size: 20px;
@@ -153,7 +155,7 @@ body {
 .confirm-buttons {
 	display: flex;
 	gap: 10px;
-	width: 100%;
+	width: 95%;
 	button {
 		cursor: pointer;
 		flex: 1 1 0;
