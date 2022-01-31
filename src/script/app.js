@@ -45,6 +45,18 @@ const mailObj = [
 	},
 ];
 
+const removeOptionsWrapperClasses = () => {
+	const classesToRemove = [
+		document.querySelectorAll('.disabled-choice'),
+		document.querySelectorAll('.enabled-choice'),
+	];
+	classesToRemove.forEach((className) => {
+		className.forEach((element) => {
+			element.classList.remove('disabled-choice', 'enabled-choice');
+		});
+	});
+};
+
 const objectCreator = () => {
 	mailObj.forEach((element) => {
 		const wrapper = element.wrapper;
@@ -153,4 +165,7 @@ const mailtoAction = () => {
 };
 
 sendBtn.addEventListener('click', mailtoAction);
-resetBtn.addEventListener('click', objectCreator);
+resetBtn.addEventListener('click', () => {
+	removeOptionsWrapperClasses();
+	objectCreator();
+});
