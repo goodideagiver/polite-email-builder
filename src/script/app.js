@@ -62,10 +62,10 @@ const removeOptionsWrapperClasses = () => {
 
 const objectCreator = () => {
 	mailObj.forEach((mailObject) => {
-		const wrapper = mailObject.wrapper;
-		wrapper.innerHTML = '';
+		const optionsWrapper = mailObject.wrapper;
+		optionsWrapper.innerHTML = '';
 		mailObject.options.forEach((option) => {
-			wrapper.appendChild(btnbuilder(option));
+			optionsWrapper.appendChild(btnbuilder(option));
 		});
 	});
 	mailAnimationPlay();
