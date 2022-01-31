@@ -158,7 +158,7 @@ copyToClipboardBtn.addEventListener('click', () => {
 	}
 });
 
-const sendBuilder = () => {
+const getSendContent = () => {
 	const outputMailto = {
 		email: email.value,
 		topic: topic.value,
@@ -168,7 +168,7 @@ const sendBuilder = () => {
 };
 
 const mailtoAction = () => {
-	const mailOutput = sendBuilder();
+	const mailOutput = getSendContent();
 	try {
 		window.location.href = `mailto:${mailOutput.email}?subject=${
 			mailOutput.topic
