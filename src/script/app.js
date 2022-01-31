@@ -134,12 +134,12 @@ const mailContentGrabber = () => {
 		if (element.innerText) {
 			output += element.innerText;
 			if (index < content.length) {
-				output += '\n\n';
+				output += '\n';
 			}
 		} else if (element.value > '') {
 			output += element.value;
 			if (index < content.length) {
-				output += '\n\n';
+				output += '\n';
 			}
 		}
 	});
@@ -148,8 +148,8 @@ const mailContentGrabber = () => {
 
 copyToClipboardBtn.addEventListener('click', () => {
 	const text = mailContentGrabber();
-	if (text) {
-		copyToClibpoard(mailContentGrabber());
+	if (text > '') {
+		copyToClibpoard(text);
 		mailAnimationPlay();
 	}
 });
