@@ -306,3 +306,8 @@ body {
 		gap: 10px;
 	}
 }
+
+.bottom-box-shadow {
+	transition: 1s !important;
+	box-shadow: 0 -50px 20px -20px rgba(0, 0, 0, 0.212) inset !important;
+}
