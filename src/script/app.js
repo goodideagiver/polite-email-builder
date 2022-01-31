@@ -16,6 +16,7 @@ const btnbuilder = (text) => {
 	const button = document.createElement('button');
 	button.innerText = text;
 	button.addEventListener('click', () => textReplacer(event));
+	button.style.backgroundColor = colorGeneratorRGBA();
 	return button;
 };
 
