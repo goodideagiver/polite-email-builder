@@ -9,8 +9,10 @@ const conclusionWrapper = document.querySelector('#conclusion');
 const copyToClipboardBtn = document.querySelector('#copy');
 const email = document.querySelector('#emailText');
 const topic = document.querySelector('#topicText');
+const mailBody = document.querySelector('#mailBody');
 const sendBtn = document.querySelector('#send');
 const resetBtn = document.querySelector('#reset');
+const signature = document.querySelector('#signature');
 
 const btnbuilder = (text) => {
 	const button = document.createElement('button');
@@ -169,4 +171,8 @@ sendBtn.addEventListener('click', mailtoAction);
 resetBtn.addEventListener('click', () => {
 	removeOptionsWrapperClasses();
 	objectCreator();
+	const elements = [mailBody, inputAdresse, topic, signature];
+	elements.forEach((element) => {
+		element.value = '';
+	});
 });
