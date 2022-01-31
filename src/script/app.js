@@ -100,21 +100,21 @@ const createResetButton = () => {
 	return resetOption;
 };
 
-const createTextNode = (text) => {
-	const chosenTextWrapper = document.createElement('div');
-	chosenTextWrapper.innerText = text;
-	chosenTextWrapper.classList.add('chosen');
-	return chosenTextWrapper;
+const createTextNode = (nodeText) => {
+	const chosenOptionWrapper = document.createElement('div');
+	chosenOptionWrapper.innerText = nodeText;
+	chosenOptionWrapper.classList.add('chosen');
+	return chosenOptionWrapper;
 };
 
 const textReplacer = (e) => {
-	const chosenTextParent = e.target.parentNode;
-	removeElements(chosenTextParent.querySelectorAll('button'));
-	chosenTextParent.appendChild(createTextNode(e.target.innerText));
-	chosenTextParent.appendChild(createResetButton());
-	chosenTextParent.classList.remove('disabled-choice');
+	const chosenOptionParent = e.target.parentNode;
+	removeElements(chosenOptionParent.querySelectorAll('button'));
+	chosenOptionParent.appendChild(createTextNode(e.target.innerText));
+	chosenOptionParent.appendChild(createResetButton());
+	chosenOptionParent.classList.remove('disabled-choice');
 	setTimeout(() => {
-		chosenTextParent.classList.add('enabled-choice');
+		chosenOptionParent.classList.add('enabled-choice');
 	}, 1);
 };
 
