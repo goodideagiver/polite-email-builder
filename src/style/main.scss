@@ -185,15 +185,15 @@ body {
 @keyframes copied {
 	0% {
 		transform: scale(1);
-		filter: none;
+		opacity: 1;
 	}
 	5% {
-		transform: scale(0.9);
-		background-color: rgba(128, 128, 128, 0.301);
+		transform: scale(0.98);
+		opacity: 0.5;
 	}
 	100% {
 		transform: scale(1);
-		filter: none;
+		opacity: 1;
 	}
 }
 
@@ -236,6 +236,7 @@ body {
 	align-items: center;
 	.option-reset {
 		height: fit-content;
+		border-radius: 50px;
 	}
 }
 
@@ -246,7 +247,7 @@ body {
 @keyframes enabled-anim {
 	from {
 		opacity: 0;
-		transform: scale(0.9);
+		transform: scale(0.7);
 	}
 	to {
 		opacity: 1;
