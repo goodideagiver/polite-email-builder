@@ -29,7 +29,7 @@ const mailAnimationPlay = () => {
 	}, 2000);
 };
 
-const mailObj = [
+const mailObjects = [
 	{
 		options: farewells,
 		wrapper: farewellsWrapper,
@@ -61,7 +61,7 @@ const removeOptionsWrapperClasses = () => {
 };
 
 const objectCreator = () => {
-	mailObj.forEach((mailObject) => {
+	mailObjects.forEach((mailObject) => {
 		const optionsWrapper = mailObject.wrapper;
 		optionsWrapper.innerHTML = '';
 		mailObject.options.forEach((option) => {
@@ -78,17 +78,15 @@ const removeElements = (nodeList) => {
 };
 
 const resetSection = (e) => {
-	mailObj.forEach((element) => {
-		if (element.wrapper === e.target.parentNode) {
-			const wrapper = element.wrapper;
-			wrapper.innerHTML = '';
-			wrapper.classList.remove('enabled-choice');
+	mailObjects.forEach((mailObject) => {
+		if (mailObject.wrapper === e.target.parentNode) {
+			mailObject.wrapper.innerHTML = '';
+			mailObject.wrapper.classList.remove('enabled-choice');
 			setTimeout(() => {
-				wrapper.classList.add('disabled-choice');
+				mailObject.wrapper.classList.add('disabled-choice');
 			}, 1);
-			const options = element.options;
-			options.forEach((option) => {
-				wrapper.appendChild(btnbuilder(option));
+			mailObject.options.forEach((option) => {
+				mailObject.wrapper.appendChild(btnbuilder(option));
 			});
 		}
 	});
