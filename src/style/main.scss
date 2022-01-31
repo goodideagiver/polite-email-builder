@@ -156,6 +156,10 @@ body {
 		color: white;
 		font-weight: bold;
 		font-size: 15px;
+		background-color: #fa6400;
+		&:hover {
+			transform: translate(0, -2px);
+		}
 	}
 }
 
