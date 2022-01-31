@@ -66,7 +66,7 @@ body {
 		}
 		&:hover {
 			background-color: gray;
-			color: white;
+			//color: white;
 			&::after {
 				transform: none;
 			}
@@ -97,10 +97,14 @@ body {
 		background-color: rgb(235, 235, 233);
 		box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 		cursor: pointer;
-
+		transition: box-shadow 0.3s, transform 0.6s ease-out,
+			background-color 0.2s;
 		&:hover {
-			background-color: gray;
+			background-color: gray !important;
 			color: white;
+			//text-shadow: black 1px 1px 2px;
+			box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+			transform: scale(0.95);
 			&::after {
 				transform: none;
 			}
@@ -119,6 +123,7 @@ body {
 	transition: 0.3s;
 	&:hover {
 		transform: scale(1.05) rotate(-360deg);
+		border-radius: 50px;
 	}
 }
 
