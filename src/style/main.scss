@@ -13,12 +13,15 @@ html {
 }
 
 body {
+	h1 {
+		margin: 0;
+	}
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
 	//width: 100vw;
-	height: fit-content;
+	height: 100vh;
 	flex-wrap: wrap;
 	flex-direction: column;
 	label {
@@ -284,16 +287,23 @@ body {
 }
 
 @media (max-width: 600px) {
+	h1 {
+		font-size: 21px;
+	}
 	.options-wrapper {
 		max-height: 20vh;
 		overflow-y: auto;
 		button {
-			flex: 1 1 45%;
+			flex: 1 1 30%;
 			max-width: none;
 		}
 	}
 	#app {
+		gap: 8px;
+		padding: 5px;
 		section {
+			padding: 0;
+			border: none;
 			* {
 				font-size: 13px;
 			}
@@ -301,8 +311,15 @@ body {
 				font-size: 20px;
 			}
 		}
+		max-height: 60vh;
 	}
 	#content {
 		gap: 10px;
+	}
+	body {
+		gap: 0px;
+	}
+	.website-bottom {
+		padding-top: 0;
 	}
 }
