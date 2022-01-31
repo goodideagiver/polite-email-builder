@@ -78,6 +78,10 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
+	padding: 5px;
+	border: rgba(0, 0, 0, 0.13) 2px solid;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.02);
 	div {
 		font-size: 20px;
 	}
@@ -207,6 +211,45 @@ body {
 		text-align: center;
 		&:hover {
 			box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+		}
+	}
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+	width: 20px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #d6dee1;
+	border-radius: 20px;
+	border: 6px solid transparent;
+	background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #a8bbbf;
+}
+
+@media (max-width: 600px) {
+	.options-wrapper {
+		button {
+			flex: 1 1 45%;
+			max-width: none;
+		}
+	}
+	#app {
+		section {
+			* {
+				font-size: 13px;
+			}
+			.material-icons-outlined {
+				font-size: 20px;
+			}
 		}
 	}
 }
