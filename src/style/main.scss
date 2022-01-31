@@ -142,7 +142,7 @@ body {
 		font-size: 20px;
 	}
 	max-width: 1600px;
-	background-color: rgba(255, 255, 255, 0.466);
+	background-color: rgba(255, 255, 255, 1);
 }
 
 #mailBody {
@@ -158,7 +158,7 @@ body {
 .confirm-buttons {
 	display: flex;
 	gap: 10px;
-	width: 95%;
+	//width: 95%;
 	button {
 		cursor: pointer;
 		flex: 1 1 0;
