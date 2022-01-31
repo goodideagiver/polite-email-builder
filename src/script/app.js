@@ -71,6 +71,9 @@ const resetSection = (e) => {
 			const wrapper = element.wrapper;
 			wrapper.innerHTML = '';
 			wrapper.classList.remove('enabled-choice');
+			setTimeout(() => {
+				wrapper.classList.add('disabled-choice');
+			}, 1);
 			const options = element.options;
 			options.forEach((option) => {
 				wrapper.appendChild(btnbuilder(option));
@@ -94,7 +97,10 @@ const textReplacer = (e) => {
 	chosenTextWrapper.classList.add('chosen');
 	chosenTextParent.appendChild(chosenTextWrapper);
 	chosenTextParent.appendChild(resetOption);
-	chosenTextParent.classList.add('enabled-choice');
+	chosenTextParent.classList.remove('disabled-choice');
+	setTimeout(() => {
+		chosenTextParent.classList.add('enabled-choice');
+	}, 1);
 };
 
 const copyToClibpoard = (source) => {

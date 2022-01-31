@@ -221,10 +221,15 @@ body {
 	display: flex;
 	flex-wrap: nowrap;
 	transition: 0.5s;
-	animation: enabled-anim 1s forwards;
+	animation: enabled-anim 1s;
+	align-items: center;
 	.option-reset {
 		height: fit-content;
 	}
+}
+
+.disabled-choice {
+	animation: enabled-anim 1s;
 }
 
 @keyframes enabled-anim {
@@ -260,6 +265,8 @@ body {
 
 @media (max-width: 600px) {
 	.options-wrapper {
+		max-height: 20vh;
+		overflow-y: auto;
 		button {
 			flex: 1 1 45%;
 			max-width: none;
@@ -274,5 +281,8 @@ body {
 				font-size: 20px;
 			}
 		}
+	}
+	#content {
+		gap: 10px;
 	}
 }
