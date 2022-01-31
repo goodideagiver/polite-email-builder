@@ -293,13 +293,14 @@ body {
 	.options-wrapper {
 		max-height: 20vh;
 		overflow-y: auto;
-		margin: 0 20px;
+		//margin: 0 20px;
 		button {
 			flex: 1 1 45%;
 			max-width: none;
 		}
 	}
 	#app {
+		margin: 10px 5px;
 		gap: 8px;
 		padding: 5px;
 		section {
@@ -313,12 +314,13 @@ body {
 				font-size: 20px;
 			}
 		}
-		max-height: 60vh;
+		max-height: 50%;
 	}
 	#content {
 		gap: 10px;
 	}
 	body {
+		flex-wrap: nowrap;
 		gap: 0px;
 	}
 	.website-bottom {
@@ -328,5 +330,8 @@ body {
 		button {
 			flex: 1 1 10%;
 		}
+		height: fit-content;
+		max-height: unset;
+		overflow: visible;
 	}
 }
