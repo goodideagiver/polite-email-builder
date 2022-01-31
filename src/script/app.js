@@ -103,11 +103,10 @@ const resetButton = () => {
 };
 
 const textReplacer = (e) => {
-	const chosenText = e.target.innerText;
 	const chosenTextParent = e.target.parentNode;
 	removeElements(chosenTextParent.querySelectorAll('button'));
 	const chosenTextWrapper = document.createElement('div');
-	chosenTextWrapper.innerText = chosenText;
+	chosenTextWrapper.innerText = e.target.innerText;
 	chosenTextWrapper.classList.add('chosen');
 	chosenTextParent.appendChild(chosenTextWrapper);
 	chosenTextParent.appendChild(resetButton());
