@@ -13,10 +13,11 @@
 		<script defer src="src/script/randomColorGenerator.js"></script>
 		<script defer src="src/obj/mailExpr.js"></script>
 		<script defer src="src/script/app.js"></script>
+		<script defer src="src/script/scrollShadow.js"></script>
 	</head>
 	<body>
 		<h1>Polite email builder</h1>
-		<div id="app">
+		<div id="app" class="sscroll">
 			<label for="adress">To:</label>
 			<section id="adress">
 				<input
@@ -37,16 +38,16 @@
 			</section>
 			<label for="content">Body</label>
 			<section id="content">
-				<div class="options-wrapper" id="greeting"></div>
-				<div class="options-wrapper" id="followup"></div>
+				<div class="options-wrapper sscroll" id="greeting"></div>
+				<div class="options-wrapper sscroll" id="followup"></div>
 				<textarea
 					placeholder="Your message body goes here"
 					class="name-box chosen"
 					id="mailBody"
 					rows="3"
 				></textarea>
-				<div class="options-wrapper" id="farewell"></div>
-				<div class="options-wrapper" id="conclusion"></div>
+				<div class="options-wrapper sscroll" id="farewell"></div>
+				<div class="options-wrapper sscroll" id="conclusion"></div>
 				<input
 					id="signature"
 					placeholder="Your signature/name"
