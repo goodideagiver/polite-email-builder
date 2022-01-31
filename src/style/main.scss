@@ -293,8 +293,9 @@ body {
 	.options-wrapper {
 		max-height: 20vh;
 		overflow-y: auto;
+		margin: 0 20px;
 		button {
-			flex: 1 1 30%;
+			flex: 1 1 45%;
 			max-width: none;
 		}
 	}
@@ -302,6 +303,7 @@ body {
 		gap: 8px;
 		padding: 5px;
 		section {
+			box-shadow: none;
 			padding: 0;
 			border: none;
 			* {
@@ -321,5 +323,10 @@ body {
 	}
 	.website-bottom {
 		padding-top: 0;
+	}
+	.confirm-buttons {
+		button {
+			flex: 1 1 10%;
+		}
 	}
 }
