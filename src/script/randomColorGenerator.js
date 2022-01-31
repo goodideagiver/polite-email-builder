@@ -1,7 +1,7 @@
 const colorGeneratorRGBA = (opacity = 0.4) => {
 	const min = Math.ceil(0);
 	const max = Math.floor(255);
-	let generatedColors = [];
+	const generatedColors = [];
 	for (let i = 0; i < 3; i++) {
 		generatedColors.push(Math.floor(Math.random() * (max - min) + min));
 	}
@@ -10,7 +10,7 @@ const colorGeneratorRGBA = (opacity = 0.4) => {
 
 const backgroundColorGradient = () => {
 	const websiteBody = document.querySelector('body');
-	let generatedColors = [];
+	const generatedColors = [];
 	for (let i = 0; i < 2; i++) {
 		generatedColors.push(colorGeneratorRGBA(0.1));
 	}
