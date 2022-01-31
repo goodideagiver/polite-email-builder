@@ -165,9 +165,13 @@ const sendBuilder = () => {
 
 const mailtoAction = () => {
 	const mailOutput = sendBuilder();
-	window.location.href = `mailto:${mailOutput.email}?subject=${
-		mailOutput.topic
-	}&body=${encodeURIComponent(mailOutput.body)}`;
+	try {
+		window.location.href = `mailto:${mailOutput.email}?subject=${
+			mailOutput.topic
+		}&body=${encodeURIComponent(mailOutput.body)}`;
+	} catch (error) {
+		alert('It was not possible to send mail via built in app');
+	}
 };
 
 objectCreator();
