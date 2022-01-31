@@ -94,12 +94,15 @@ const resetSection = (e) => {
 	});
 };
 
-const textReplacer = (e) => {
+const resetButton = () => {
 	const resetOption = document.createElement('div');
 	resetOption.innerText = 'restart_alt';
 	resetOption.classList.add('option-reset', 'material-icons-outlined');
 	resetOption.addEventListener('click', resetSection);
+	return resetOption;
+};
 
+const textReplacer = (e) => {
 	const chosenText = e.target.innerText;
 	const chosenTextParent = e.target.parentNode;
 	const allButtons = chosenTextParent.querySelectorAll('button');
@@ -108,7 +111,7 @@ const textReplacer = (e) => {
 	chosenTextWrapper.innerText = chosenText;
 	chosenTextWrapper.classList.add('chosen');
 	chosenTextParent.appendChild(chosenTextWrapper);
-	chosenTextParent.appendChild(resetOption);
+	chosenTextParent.appendChild(resetButton());
 	chosenTextParent.classList.remove('disabled-choice');
 	setTimeout(() => {
 		chosenTextParent.classList.add('enabled-choice');
