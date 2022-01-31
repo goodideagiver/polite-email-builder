@@ -78,9 +78,8 @@ const removeElements = (nodeList) => {
 };
 
 const resetSection = (e) => {
-	console.log(e.target.parentNode);
 	mailObj.forEach((element) => {
-		if (element.wrapper == e.target.parentNode) {
+		if (element.wrapper === e.target.parentNode) {
 			const wrapper = element.wrapper;
 			wrapper.innerHTML = '';
 			wrapper.classList.remove('enabled-choice');
