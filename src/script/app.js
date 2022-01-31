@@ -71,8 +71,6 @@ const objectCreator = () => {
 	mailAnimationPlay();
 };
 
-objectCreator();
-
 const removeElements = (nodeList) => {
 	nodeList.forEach((element) => {
 		element.remove();
@@ -167,6 +165,7 @@ const mailtoAction = () => {
 	}&body=${encodeURIComponent(mailOutput.body)}`;
 };
 
+objectCreator();
 sendBtn.addEventListener('click', mailtoAction);
 resetBtn.addEventListener('click', () => {
 	removeOptionsWrapperClasses();
