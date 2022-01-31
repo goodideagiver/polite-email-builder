@@ -48,8 +48,7 @@ sendBtn.addEventListener('click', mailtoAction);
 resetBtn.addEventListener('click', () => {
 	removeOptionsWrapperClasses();
 	objectCreator();
-	const elements = [mailBody, inputAdresse, topic, signature];
-	elements.forEach((element) => {
-		element.value = '';
+	[mailBody, inputAdresse, topic, signature].forEach((emailInputField) => {
+		emailInputField.value = '';
 	});
 });
