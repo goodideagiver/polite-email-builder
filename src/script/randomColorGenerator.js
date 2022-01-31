@@ -1,4 +1,4 @@
-const colorGeneratorRGBA = (opacity = 0.2) => {
+const colorGeneratorRGBA = (opacity = 0.4) => {
 	const min = Math.ceil(0);
 	const max = Math.floor(255);
 	let generatedColors = [];
@@ -15,7 +15,7 @@ const backgroundColorGradient = () => {
 		generatedColors.push(colorGeneratorRGBA(0.1));
 	}
 	console.log(generatedColors);
-	websiteBody.style.background = ` linear-gradient(${generatedColors[0]}, ${generatedColors[0]})`;
+	websiteBody.style.background = ` linear-gradient(${generatedColors[0]}, ${generatedColors[1]})`;
 };
 
 backgroundColorGradient();
