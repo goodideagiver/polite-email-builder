@@ -70,6 +70,7 @@ const resetSection = (e) => {
 		if (element.wrapper == e.target.parentNode) {
 			const wrapper = element.wrapper;
 			wrapper.innerHTML = '';
+			wrapper.classList.remove('enabled-choice');
 			const options = element.options;
 			options.forEach((option) => {
 				wrapper.appendChild(btnbuilder(option));
@@ -93,6 +94,7 @@ const textReplacer = (e) => {
 	chosenTextWrapper.classList.add('chosen');
 	chosenTextParent.appendChild(chosenTextWrapper);
 	chosenTextParent.appendChild(resetOption);
+	chosenTextParent.classList.add('enabled-choice');
 };
 
 const copyToClibpoard = (source) => {

@@ -215,6 +215,29 @@ body {
 	}
 }
 
+.enabled-choice {
+	background-color: transparent;
+	border: none;
+	display: flex;
+	flex-wrap: nowrap;
+	transition: 0.5s;
+	animation: enabled-anim 1s forwards;
+	.option-reset {
+		height: fit-content;
+	}
+}
+
+@keyframes enabled-anim {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
 /* custom scrollbar */
 ::-webkit-scrollbar {
 	width: 20px;
