@@ -14,7 +14,6 @@ const backgroundColorGradient = () => {
 	for (let i = 0; i < 2; i++) {
 		generatedColors.push(colorGeneratorRGBA(0.1));
 	}
-	console.log(generatedColors);
 	websiteBody.style.background = ` linear-gradient(${generatedColors[0]}, ${generatedColors[1]})`;
 };
 
