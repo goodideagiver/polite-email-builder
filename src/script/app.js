@@ -102,13 +102,17 @@ const createResetButton = () => {
 	return resetOption;
 };
 
+const createTextNode = (text) => {
+	const chosenTextWrapper = document.createElement('div');
+	chosenTextWrapper.innerText = text;
+	chosenTextWrapper.classList.add('chosen');
+	return chosenTextWrapper;
+};
+
 const textReplacer = (e) => {
 	const chosenTextParent = e.target.parentNode;
 	removeElements(chosenTextParent.querySelectorAll('button'));
-	const chosenTextWrapper = document.createElement('div');
-	chosenTextWrapper.innerText = e.target.innerText;
-	chosenTextWrapper.classList.add('chosen');
-	chosenTextParent.appendChild(chosenTextWrapper);
+	chosenTextParent.appendChild(createTextNode(e.target.innerText));
 	chosenTextParent.appendChild(createResetButton());
 	chosenTextParent.classList.remove('disabled-choice');
 	setTimeout(() => {
