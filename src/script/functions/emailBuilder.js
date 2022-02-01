@@ -18,9 +18,9 @@ const removeOptionsWrapperClasses = () => {
 		document.querySelectorAll('.disabled-choice'),
 		document.querySelectorAll('.enabled-choice'),
 	];
-	classesToRemove.forEach((className) => {
-		className.forEach((element) => {
-			element.classList.remove('disabled-choice', 'enabled-choice');
+	classesToRemove.forEach((nameOfClass) => {
+		nameOfClass.forEach((classElement) => {
+			classElement.classList.remove('disabled-choice', 'enabled-choice');
 		});
 	});
 };
@@ -84,17 +84,17 @@ const textReplacer = (e) => {
 };
 
 const mailContentGrabber = () => {
-	const content = document.querySelectorAll('.chosen');
+	const userInputMailContent = document.querySelectorAll('.chosen');
 	let output = '';
-	content.forEach((element, index) => {
+	userInputMailContent.forEach((element, index) => {
 		if (element.innerText) {
 			output += element.innerText;
-			if (index < content.length) {
+			if (index < userInputMailContent.length) {
 				output += '\n';
 			}
 		} else if (element.value > '') {
 			output += element.value;
-			if (index < content.length) {
+			if (index < userInputMailContent.length) {
 				output += '\n';
 			}
 		}
