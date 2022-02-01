@@ -7,11 +7,11 @@ const tooltipNode = (nodeText) => {
 
 const showTooltip = (tooltipAnchorElement, tooltipText) => {
 	if (!tooltipAnchorElement.querySelector('.tooltip')) {
-		const tooltip = tooltipNode(tooltipText);
+		const tooltipElement = tooltipNode(tooltipText);
 		tooltipAnchorElement.style.position = 'relative';
-		tooltipAnchorElement.appendChild(tooltip);
+		tooltipAnchorElement.appendChild(tooltipElement);
 		setTimeout(() => {
-			tooltip.remove();
+			tooltipElement.remove();
 			tooltipAnchorElement.style.position = '';
 		}, 2500);
 	}
