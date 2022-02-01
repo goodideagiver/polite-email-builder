@@ -243,7 +243,10 @@ body {
 	transition: 0.5s;
 	animation: enabled-anim 1s;
 	align-items: center;
+	justify-content: space-between;
 	width: 100%;
+	border-bottom: 2px lightgray dashed;
+	border-radius: 0;
 	.option-reset {
 		height: fit-content;
 		border-radius: 50px;
@@ -257,7 +260,7 @@ body {
 @keyframes enabled-anim {
 	from {
 		opacity: 0;
-		transform: scale(0.7);
+		transform: scale(0.9);
 	}
 	to {
 		opacity: 1;
@@ -338,6 +341,7 @@ body {
 		max-height: unset;
 		overflow: visible;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 
