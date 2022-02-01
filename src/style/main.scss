@@ -344,32 +344,35 @@ body {
 
 .tooltip {
 	position: absolute;
-	top: 0;
+	top: -100%;
 	left: 0;
 	width: fit-content;
 	height: fit-content;
 	font-size: 13px !important;
-	transform: translate(0, -110%);
+	transform: translate(0, -10px);
 	background-color: white;
 	border-radius: 8px;
 	padding: 5px;
 	color: black;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 	animation: tooltip-animation 2s ease-in-out forwards;
 }
 
 @keyframes tooltip-animation {
 	0% {
 		opacity: 0;
+		transform: scale(0.9);
 	}
 	10% {
 		opacity: 1;
+		transform: scale(1);
 	}
 	90% {
 		opacity: 1;
+		transform: scale(1);
 	}
 	100% {
 		opacity: 0;
+		transform: scale(0.9);
 	}
 }
