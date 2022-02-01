@@ -38,6 +38,7 @@ copyToClipboardBtn.addEventListener('click', () => {
 	if (text > '') {
 		copyToClibpoard(text);
 		mailAnimationPlay();
+		showTooltip(event.target, `Copied to clipboard`);
 	} else {
 		showTooltip(event.target, `Can't copy empty message`);
 	}

@@ -108,11 +108,19 @@ const getSendContent = () => {
 		topic: topic.value,
 		body: mailContentGrabber(),
 	};
-	return outputMailto;
+	if (email.value > '' || topic.value > '' || mailContentGrabber() > '') {
+		return outputMailto;
+	} else {
+		return 0;
+	}
 };
 
 const mailtoAction = () => {
 	const mailOutput = getSendContent();
+	if (!mailOutput) {
+		showTooltip(event.target, `Can't send empty message`);
+		return;
+	}
 	try {
 		window.location.href = `mailto:${mailOutput.email}?subject=${
 			mailOutput.topic
