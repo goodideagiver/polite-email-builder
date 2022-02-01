@@ -6,13 +6,14 @@ const tooltipNode = (nodeText) => {
 };
 
 const showTooltip = (tooltipAnchorElement, tooltipText) => {
-	if (!tooltipAnchorElement.querySelector('.tooltip')) {
-		const tooltipElement = tooltipNode(tooltipText);
-		tooltipAnchorElement.style.position = 'relative';
-		tooltipAnchorElement.appendChild(tooltipElement);
-		setTimeout(() => {
-			tooltipElement.remove();
-			tooltipAnchorElement.style.position = '';
-		}, 2100);
+	if ((existTooltip = tooltipAnchorElement.querySelector('.tooltip'))) {
+		existTooltip.remove();
 	}
+	const tooltipElement = tooltipNode(tooltipText);
+	tooltipAnchorElement.style.position = 'relative';
+	tooltipAnchorElement.appendChild(tooltipElement);
+	setTimeout(() => {
+		tooltipElement.remove();
+		tooltipAnchorElement.style.position = '';
+	}, 2100);
 };
