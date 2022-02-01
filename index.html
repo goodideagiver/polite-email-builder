@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<h1>Polite email builder</h1>
-		<div id="app" class="sscroll outer-borders">
+		<div id="app" class="sscroll outer-borders main-app-window">
 			<label for="adress">To:</label>
 			<section id="adress" class="outer-borders">
 				<input
@@ -40,12 +40,12 @@
 				/>
 			</section>
 			<label for="content">Body</label>
-			<section id="content" class="outer-borders">
+			<section id="content" class="outer-borders mail-body">
 				<div class="options-wrapper sscroll" id="greeting"></div>
 				<div class="options-wrapper sscroll" id="followup"></div>
 				<textarea
 					placeholder="Your message body goes here"
-					class="name-box chosen"
+					class="name-box chosen mail-message-textarea"
 					id="mailBody"
 					rows="3"
 				></textarea>
