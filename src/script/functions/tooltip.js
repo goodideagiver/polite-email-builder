@@ -13,6 +13,6 @@ const showTooltip = (tooltipAnchorElement, tooltipText) => {
 		setTimeout(() => {
 			tooltipElement.remove();
 			tooltipAnchorElement.style.position = '';
-		}, 2000);
+		}, 2100);
 	}
 };
