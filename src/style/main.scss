@@ -305,7 +305,7 @@ body {
 		margin: auto;
 		flex-wrap: nowrap;
 	}
-	#app {
+	.main-app-window {
 		margin: 10px 5px;
 		gap: 8px;
 		padding: 5px;
@@ -322,7 +322,7 @@ body {
 		}
 		max-height: 50%;
 	}
-	#content {
+	.mail-body {
 		gap: 10px;
 	}
 	body {
