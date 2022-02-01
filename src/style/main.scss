@@ -116,7 +116,7 @@ body {
 	background-color: white;
 	border: 1px rgba(0, 0, 0, 0.273) solid;
 	color: black;
-	padding: 5px;
+	padding: 10px;
 	border-radius: 10px;
 	font-weight: bold;
 	cursor: pointer;
@@ -289,6 +289,9 @@ body {
 }
 
 @media (max-width: 600px) {
+	.option-reset {
+		padding: 10px;
+	}
 	h1 {
 		font-size: 21px;
 	}
