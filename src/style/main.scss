@@ -222,7 +222,7 @@ body {
 		}
 	}
 	a {
-		max-height: 30px;
+		min-width: max-content;
 		background-color: white;
 		border-radius: 5px;
 		border: 1px lightgray solid;
@@ -339,6 +339,7 @@ body {
 		height: fit-content;
 		max-height: unset;
 		overflow: visible;
+		flex-wrap: wrap;
 	}
 }
 
