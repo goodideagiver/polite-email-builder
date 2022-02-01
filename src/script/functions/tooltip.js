@@ -6,11 +6,13 @@ const tooltipNode = (nodeText) => {
 };
 
 const showTooltip = (tooltipAnchorElement, tooltipText) => {
-	const tooltip = tooltipNode(tooltipText);
-	tooltipAnchorElement.style.position = 'relative';
-	tooltipAnchorElement.appendChild(tooltip);
-	setTimeout(() => {
-		tooltip.remove();
-		tooltipAnchorElement.style.position = '';
-	}, 1000);
+	if (!tooltipAnchorElement.querySelector('.tooltip')) {
+		const tooltip = tooltipNode(tooltipText);
+		tooltipAnchorElement.style.position = 'relative';
+		tooltipAnchorElement.appendChild(tooltip);
+		setTimeout(() => {
+			tooltip.remove();
+			tooltipAnchorElement.style.position = '';
+		}, 2500);
+	}
 };
