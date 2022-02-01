@@ -29,10 +29,7 @@ body {
 	}
 }
 
-#app,
-#adress,
-#topic,
-#content {
+.outer-borders {
 	border: 2px rgba(54, 54, 54, 0.184) solid;
 	display: block;
 	flex-basis: 100%;
