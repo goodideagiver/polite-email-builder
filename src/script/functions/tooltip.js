@@ -1,4 +1,4 @@
-const tooltipNode = (nodeText) => {
+const createTooltipNode = (nodeText) => {
 	const tooltipElement = document.createElement('div');
 	tooltipElement.classList.add('tooltip');
 	tooltipElement.innerText = nodeText;
@@ -9,7 +9,7 @@ const showTooltip = (tooltipAnchorElement, tooltipText) => {
 	if ((existTooltip = tooltipAnchorElement.querySelector('.tooltip'))) {
 		existTooltip.remove();
 	}
-	const tooltipElement = tooltipNode(tooltipText);
+	const tooltipElement = createTooltipNode(tooltipText);
 	tooltipAnchorElement.style.position = 'relative';
 	tooltipAnchorElement.appendChild(tooltipElement);
 	setTimeout(() => {
