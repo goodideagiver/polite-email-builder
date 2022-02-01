@@ -38,6 +38,8 @@ copyToClipboardBtn.addEventListener('click', () => {
 	if (text > '') {
 		copyToClibpoard(text);
 		mailAnimationPlay();
+	} else {
+		showTooltip(event.target, `Can't copy empty message`);
 	}
 });
 
