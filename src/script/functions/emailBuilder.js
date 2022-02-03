@@ -7,10 +7,13 @@ const btnbuilder = (text) => {
 };
 
 const mailAnimationPlay = () => {
-	contentWrapper.classList.add('copy-animation');
-	setTimeout(() => {
+	const classesOnTheElement = contentWrapper.classList;
+	if (Object.values(classesOnTheElement).includes('copy-animation')) {
 		contentWrapper.classList.remove('copy-animation');
-	}, 2000);
+	}
+	setTimeout(() => {
+		contentWrapper.classList.add('copy-animation');
+	}, 1);
 };
 
 const removeOptionsWrapperClasses = () => {
